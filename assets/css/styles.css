@@ -127,7 +127,9 @@ body {
   color: var(--text-color);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
   font-family: var(--title-font);
@@ -235,14 +237,17 @@ input {
     height: 100%;
     box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
     padding: 3rem;
-    transition: .4s;
+    transition: 0.4s;
+  }
+
+  .nav__item {
+    margin-bottom: 3rem;
   }
 }
 
 .nav__list {
   display: flex;
   flex-direction: column;
-  row-gap: 2.5rem;
 }
 
 .nav__link {
@@ -287,7 +292,7 @@ input {
 }
 
 .active-link::before {
-  content: '';
+  content: "";
   position: absolute;
   background-color: var(--title-color);
   width: 100%;
@@ -941,11 +946,11 @@ input {
   right: 1rem;
   bottom: -20%;
   background-color: var(--first-color);
-  padding: .5rem;
+  padding: 0.5rem;
   display: flex;
-  opacity: .9;
+  opacity: 0.9;
   z-index: var(--z-tooltip);
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .scrollup:hover {
@@ -965,7 +970,7 @@ input {
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
-  width: .60rem;
+  width: 0.6rem;
   background-color: var(--scroll-bar-color);
 }
 
@@ -1174,10 +1179,10 @@ input {
     margin-right: auto;
   }
   .home__container {
-    grid-template-rows: 2fr .5fr;
+    grid-template-rows: 2fr 0.5fr;
   }
   .home__info {
-    width: 328px;
+    width: 250px;
     grid-template-columns: 1fr 2fr;
     column-gap: 2rem;
   }
