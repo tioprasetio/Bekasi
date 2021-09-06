@@ -18,7 +18,7 @@
   --text-color: hsl(var(--hue-color), 24%, 35%);
   --text-color-light: hsl(var(--hue-color), 8%, 60%);
   --input-color: hsl(var(--hue-color), 24%, 97%);
-  --body-color: hsl(var(--hue-color), 100%, 99%);
+  --body-color: hsl(var(--hue-color), 24%, 90%);
   --stars-color: hsl(var(--hue-color), 44%, 34%);
   --white-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
@@ -57,6 +57,10 @@
   --img-transition: 0.3s;
   --img-hidden: hidden;
   --img-scale: scale(1.1);
+
+  /*========== Shadow ============*/
+  --text-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+  --box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
 }
 
 @media screen and (min-width: 968px) {
@@ -82,6 +86,8 @@ body.dark-theme {
   --stars-color: hsl(var(--hue-color), 95%, 64%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+  --box-shadow: 3px 3px 6px #131313, -3px -3px 6px #56b5ca;
+  --text-shadow: 3px 3px 6px #131313, -3px -3px 6px #56b5ca;
 }
 
 /*========== Button Dark/Light ==========*/
@@ -179,6 +185,7 @@ input {
   text-align: center;
   text-transform: capitalize;
   margin-bottom: var(--mb-2);
+  text-shadow: var(--text-shadow);
 }
 
 .container {
@@ -417,6 +424,16 @@ input {
 /*=============== ABOUT ===============*/
 .about__data {
   text-align: center;
+}
+
+.button_about{
+  display: inline-block;
+    background-color: #24474c;
+    color: var(--white-color);
+    padding: 1rem 2rem;
+    font-weight: var(--font-semi-bold);
+    transition: 0.3s;
+    box-shadow: var(--box-shadow);
 }
 
 .about__container {
@@ -677,6 +694,7 @@ input {
   height: 5px;
   background: var(--stars-color);
   margin: 26px auto;
+  --box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
 }
 
 .row {
@@ -695,14 +713,15 @@ input {
 .testimonial {
   background: var(--testi-color);
   padding: 30px;
-  border-radius: 5%;
-  box-shadow: 0 1rem 1rem rgb(0 0 0 / 10%);
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
 }
 
 .testimonial img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  box-shadow: var(--box-shadow);
 }
 
 .testimonial p {
@@ -714,6 +733,7 @@ input {
   font-size: 20px;
   text-transform: uppercase;
   margin: 20px 0;
+  text-shadow: var(--box-shadow);
 }
 
 .stars {
@@ -799,6 +819,7 @@ input {
 .footer__title,
 .footer__subtitle {
   font-size: var(--h3-font-size);
+  text-shadow: var(--text-shadow);
 }
 
 .footer__title {
