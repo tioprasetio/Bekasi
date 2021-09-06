@@ -19,6 +19,7 @@
   --text-color-light: hsl(var(--hue-color), 8%, 60%);
   --input-color: hsl(var(--hue-color), 24%, 97%);
   --body-color: hsl(var(--hue-color), 100%, 99%);
+  --stars-color: hsl(var(--hue-color), 44%, 34%);
   --white-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
@@ -77,6 +78,8 @@ body.dark-theme {
   --text-color: hsl(var(--hue-color), 8%, 75%);
   --input-color: hsl(var(--hue-color), 29%, 16%);
   --body-color: hsl(var(--hue-color), 29%, 12%);
+  --testi-color: hsl(var(--hue-color), 41%, 16%);
+  --stars-color: hsl(var(--hue-color), 95%, 64%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
@@ -124,9 +127,7 @@ body {
   color: var(--text-color);
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
   font-family: var(--title-font);
@@ -207,8 +208,7 @@ input {
   align-items: center;
 }
 
-.nav__logo,
-.nav__toggle {
+.nav__logo, .nav__toggle {
   color: var(--white-color);
 }
 
@@ -225,7 +225,7 @@ input {
   position: relative;
 }
 
-@media screen and (min-width: 321px) {
+@media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
     background-color: var(--body-color);
@@ -235,38 +235,17 @@ input {
     height: 100%;
     box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
     padding: 3rem;
-    transition: 0.4s;
-  }
-
-  .nav__item {
-    margin-bottom: 3rem;
-  }
-}
-
-@media only screen and (width: 320px) {
-  .nav__menu {
-    position: fixed;
-    background-color: var(--body-color);
-    top: 0;
-    right: -100%;
-    width: 70%;
-    height: 100%;
-    box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
-    padding: 3rem;
-    transition: 0.4s;
-  }
-
-  .nav__item {
-    margin-bottom: 3rem;
+    transition: .4s;
   }
 }
 
 .nav__list {
-  display: contents;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
 }
 
 .nav__link {
-  position: relative;
   color: var(--text-color-light);
   font-weight: var(--font-semi-bold);
   text-transform: uppercase;
@@ -278,7 +257,7 @@ input {
 
 .nav__close {
   position: absolute;
-  top: 0.75rem;
+  top: .75rem;
   right: 1rem;
   font-size: 1.5rem;
   color: var(--title-color);
@@ -308,7 +287,7 @@ input {
 }
 
 .active-link::before {
-  content: "";
+  content: '';
   position: absolute;
   background-color: var(--title-color);
   width: 100%;
@@ -674,6 +653,83 @@ input {
   padding: 0.75rem 1rem;
 }
 
+/*=============== TESTI ===============*/
+.testimonials {
+  padding: 40px 0;
+  color: #434343;
+  text-align: center;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.border {
+  width: 160px;
+  height: 5px;
+  background: var(--stars-color);
+  margin: 26px auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col {
+  flex: 33.33%;
+  max-width: 33.33%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.testimonial {
+  background: var(--testi-color);
+  padding: 30px;
+  border-radius: 5%;
+  box-shadow: 0 1rem 1rem rgb(0 0 0 / 10%);
+}
+
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.testimonial p {
+  color: var(--text-color);
+}
+
+.name {
+  color: var(--text-color);
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.stars {
+  color: var(--stars-color);
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 960px) {
+  .col {
+    flex: 100%;
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .col {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
 /*=============== SUBSCRIBE ===============*/
 .subscribe__bg {
   background-color: var(--first-color-second);
@@ -881,15 +937,15 @@ input {
 /*========== SCROLL UP ==========*/
 .scrollup {
   position: fixed;
-  border-radius: 50px;
+  border-radius: 50%;
   right: 1rem;
   bottom: -20%;
   background-color: var(--first-color);
-  padding: 0.5rem;
+  padding: .5rem;
   display: flex;
-  opacity: 0.9;
+  opacity: .9;
   z-index: var(--z-tooltip);
-  transition: 0.4s;
+  transition: .4s;
 }
 
 .scrollup:hover {
@@ -909,7 +965,7 @@ input {
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
-  width: 0.6rem;
+  width: .60rem;
   background-color: var(--scroll-bar-color);
 }
 
@@ -1118,10 +1174,10 @@ input {
     margin-right: auto;
   }
   .home__container {
-    grid-template-rows: 2fr 0.5fr;
+    grid-template-rows: 2fr .5fr;
   }
   .home__info {
-    width: 250px;
+    width: 328px;
     grid-template-columns: 1fr 2fr;
     column-gap: 2rem;
   }
