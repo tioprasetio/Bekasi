@@ -1027,6 +1027,13 @@ input {
   .video__container {
     padding: 0;
   }
+
+  .popup .content {
+    width: 90%;
+    height: 350px;
+  }
+
+  
 }
 
 @media screen and (max-width: 319px) and (max-height: 567px) {
@@ -1034,6 +1041,10 @@ input {
     width: 90%;
     height: 350px;
   }
+
+  .popup .content p{
+      font-size: 0.6rem;
+    }
 }
 
 @media screen and (min-height: 568px) and (max-height: 666px) {
