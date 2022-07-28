@@ -1044,7 +1044,14 @@ input {
 
   .popup .content p{
       font-size: 0.6rem;
-    }
+  }
+
+  .place__button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0.55rem 0.7rem;
+  }
 }
 
 @media screen and (min-height: 568px) and (max-height: 666px) {
@@ -1287,7 +1294,17 @@ input {
 }
 
 /* For tall screens on mobiles y desktop*/
-@media screen and (min-height: 721px) {
+/* @media screen and (min-height: 721px) {
+  body {
+    margin: 0;
+  }
+  .home__container,
+  .home__img {
+    height: 640px;
+  }
+} */
+
+@media screen and (min-height: 1000px) {
   body {
     margin: 0;
   }

@@ -120,7 +120,7 @@ const sr = ScrollReveal({
 })
 
 
-sr.reveal(`.home__data, .home__social-link, .home__info,
+sr.reveal(`.home__data-subtitle, .btn-jelajah, .home__social-link, .home__info,
            .discover__container,
            .experience__data, .experience__overlay,
            .place__card,

@@ -19,7 +19,7 @@
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <title>Bekasi</title>
+    <title>Our city Our pride</title>
 </head>
 
 <body>
@@ -63,13 +63,13 @@
     <main class="main">
         <!--==================== HOME ====================-->
         <section class="home" id="beranda">
-            <img src="assets/img/home-1.png" alt="" class="home__img">
+            <img src="assets/img/home-1.jpg" alt="" class="home__img">
 
             <div class="home__container container grid">
                 <div class="home__data">
                     <span class="home__data-subtitle">Pilih tempat wisatamu</span>
-                    <h1 class="home__data-title">Jelajahi tempat <br> Wisata <b>Terbaik <br> Bekasi</b></h1>
-                    <a href="#tentang" class="button">Jelajah</a>
+                    <h1 class="home__data-title"></h1>
+                    <a href="#tentang" class="button btn-jelajah">Jelajah</a>
 
                 </div>
 
@@ -742,6 +742,14 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/script.js"></script>
+
+    <!-- ================== GSAP ================= -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+    <script>
+        gsap.to('.home__data-title', { duration: 2, delay: 1.8, text: 'Jelajahi tempat <br> Wisata <b>Terbaik <br> Bekasi</b>' });
+    </script>
 </body>
 
 </html>
